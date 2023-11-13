@@ -1,11 +1,14 @@
 <%- include("code/header") %>
 <%- include("code/nav") %>
-<link rel="stylesheet" href="/stylesheets/login.css">
+<link rel="stylesheet" href="/stylesheets/signin.css">
 <div class="login">
-    <form action="/login" method="post">
+    <form action="/signin" method="post">
+        <h2>SIGN-IN</h2>
         <input type="text" placeholder="Enter Username" name="username" id=""><br>
         <input type="password" name="password" placeholder="Enter Password" id=""><br>
-        <button>Log In</button>
+        <h6><a href="">Forget Password</a></h6>
+        <button>Sign In</button>
+        <h4>Don't Have Account? <a href="/signup">Sign Up</a></h4>
     </form>
 </div>
 

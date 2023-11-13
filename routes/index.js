@@ -18,8 +18,12 @@ router.get('/contactus', function(req, res, next) {
   res.render('ContactUs', { title: 'Express' });
 });
 
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Express' });
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Express' });
+});
+
+router.get('/signin', function(req, res, next) {
+  res.render('signin', { title: 'Express' });
 });
 
 module.exports = router;
