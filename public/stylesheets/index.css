@@ -1,0 +1,249 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.page1{
+    height: 90vh;
+    width: 100%;
+    /* background-color: rgb(205, 154, 154); */
+}
+.page1-heading{
+    height: 40vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    /* background-color: pink; */
+    background-image: url(/images/page1-bg.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 0 2.5vmax;
+    background-blend-mode: color-burn;
+}
+.page1-heading >h1{
+    font-size: 6vmax;
+    font-family: 'Courgette', cursive;
+    user-select: none;
+}
+.page1-heading >h1 >span{
+    color: yellow;
+}
+.page1-sub-heading{
+    height: 10vh;
+    padding: 0 5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background:linear-gradient(to right ,yellow, white);
+    transform: translateY(-4vmax);
+}
+.page1-sub-heading >h3{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 3vmax;
+}
+.page1-boxes{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box{
+    height: 30vh;
+    width: 20%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5vmax 0;
+    transition: all linear 0.3s;
+    border-radius: 0.5vmax;
+}
+.box > h4{
+    font-size: 1.5vmax;
+    font-family: cursive;
+}
+.box:hover{
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.417);
+}
+/* /////// PAGE 2 ///////// */
+
+.page2{
+    height: 90vh;
+    width: 100%;
+    /* background-color: orange; */
+    padding: 7vmax 10vmax ;
+    display: flex;
+    justify-content: center;
+    gap: 5vmax;
+}
+.page2-left{
+    height: 60vh;
+    width: 45%;
+    padding: 2vmax;
+    /* background-color: red; */
+}
+.page2-left >img{
+    height: 100%;
+    width: 100%;
+}
+.page2-right{
+    height: 60vh;
+    width: 45%;
+    /* background-color: rgb(136, 255, 0); */
+    padding: 2vmax;
+}
+.page2-right >h2{
+    font-size: 3vmax;
+    font-family: sans-serif;
+    margin-top: 4vmax;
+}
+.page2-right >p{
+    margin-top: 2vmax;
+    font-size: 1.5vmax;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* /////// PAGE3 ???????/ */
+
+.page3{
+    height: 90vh;
+    width: 100%;
+    /* background-color: pink; */
+    padding: 7vmax 10vmax ;
+    display: flex;
+    justify-content: center;
+    gap: 5vmax;
+}
+.page3-left{
+    height: 60vh;
+    width: 45%;
+    /* background-color: rebeccapurple; */
+    padding: 2vmax;
+}
+.page3-left >h2{
+    font-size: 3vmax;
+    font-family: sans-serif;
+    margin-top: 4vmax;
+}
+.page3-left >p{
+    margin-top: 2vmax;
+    font-size: 1.5vmax;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.page3-right{
+    height: 60vh;
+    width: 45%;
+    /* background-color: gold; */
+    padding: 2vmax;
+}
+.page3-right >img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* /////// PAGE 4 ///////// */
+
+.page4{
+    height: 90vh;
+    width: 100%;
+    /* background-color: orange; */
+    padding: 7vmax 10vmax ;
+    display: flex;
+    justify-content: center;
+    gap: 5vmax;
+}
+.page4-left{
+    height: 60vh;
+    width: 45%;
+    padding: 2vmax;
+    /* background-color: red; */
+}
+.page4-left >img{
+    height: 100%;
+    width: 100%;
+}
+.page4-right{
+    height: 60vh;
+    width: 45%;
+    /* background-color: rgb(136, 255, 0); */
+    padding: 2vmax;
+}
+.page4-right >h2{
+    font-size: 3vmax;
+    font-family: sans-serif;
+    margin-top: 4vmax;
+}
+.page4-right >p{
+    margin-top: 2vmax;
+    font-size: 1.5vmax;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 600px) {
+    .page1-heading{
+        background-position: center;
+        color: whitesmoke;
+        /* background-color: red; */
+        height: 40vh;
+    }
+    .page1-heading >h1{
+        font-size: 4vmax;
+        margin: auto;
+        padding-left: 3.5vmax;
+    }
+    .page1-boxes{
+        height: 80vh;
+        /* background-color: rebeccapurple; */
+        display: inline-block;
+    }
+    .box{
+        height: 18vh;
+        width: 70%;
+        margin:1vmax auto;
+    }
+    .page2{
+        margin-top: 40vh;
+        height: 55vh;
+        padding: 4vmax 3vmax;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 2vmax;
+    }
+    .page2-left , .page2-right{
+        width: 100%;
+    }
+    .page2-right{
+        text-align: center;
+    }
+    .page3{
+        height: 55vh;
+        padding: 3vmax;
+        flex-direction: column;
+    }
+    .page3-left , .page3-right{
+        width: 100%;
+        padding: 0;
+    }
+    .page3-left{
+        text-align: center;
+    }
+    .page4{
+        height: 55vh;
+        padding: 4vmax 3vmax;
+        /* background-color: red; */
+        flex-direction: column;
+        gap: 0vmax;
+    }
+    .page4-left , .page4-right{
+        width: 100%;
+    }
+    .page4-right{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+.nav-filler{
+    height: 10vh;
+    width: 100%;
+}
+nav{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(197, 176, 219);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7vmax;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+nav >h2 >a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Courgette', cursive;
+}
+nav >ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 5vmax;
+    justify-content: space-between;
+}
+nav >ul >li >a{
+    text-decoration: none;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 1.5vmax;
+    color: black;
+}
+nav >button{
+    font-size: 1.2vmax;
+    font-weight: 700;
+    padding: 0.5vmax 1.3vmax;
+    background-color: transparent;
+    border-radius: 0.5vmax;
+    border: none;
+    box-shadow: 0.1vmax 0.1vmax 0.5vmax black;
+}
+nav >button >a{
+    text-decoration: none;
+}
+.menu{
+    display: none;
+}
+.res-nav{
+    position: absolute;
+    top: -50%;
+    right: 0;
+    height: 40vh;
+    width: 45%;
+    backdrop-filter: blur(3vmax);
+    background-color: rgba(245, 245, 245, 0.316);
+    box-shadow: 0 0 0.5vmax black;
+}
+.res-nav >ul{
+    list-style: none;
+}
+.res-nav >ul >li{
+    margin-top: 3vmax;
+}
+.res-nav >ul >li >a{
+    text-decoration: none;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 2.5vmax;
+    color: black;
+}
+@media (max-width: 600px) {
+    .nav-filler{
+        height: 10vh;
+    }
+    nav{
+        padding: 0 2vmax;
+    }
+    nav >ul , nav >button{
+        display: none;
+    }
+    .menu{
+        height: 5vmax;
+        width: 10vw;
+        /* background-color: red; */
+        display: initial;
+        font-size: 3vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .res-nav{
+        display: initial;
+        padding-top: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all linear 0.5s;
+    }
+    .res-nav >button{
+        padding: 1vmax 4vmax;
+        margin-top: 3vmax;
+        background-color: transparent;
+        border: none;
+        box-shadow: 0.1vmax 0.1vmax 0.5vmax black;
+        border-radius: 0.5vmax;
+    }
+    .res-nav >button >a{
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .res-nav >button >i{
+        text-decoration: none;
+        font-size: 2vmax;
+    }
+}
