@@ -65,10 +65,10 @@ nav >button >a{
     position: absolute;
     top: -50%;
     right: 0;
-    height: 40vh;
+    z-index: 10;
+    height: 43vh;
     width: 45%;
-    backdrop-filter: blur(3vmax);
-    background-color: rgba(245, 245, 245, 0.316);
+    background-color: black;
     box-shadow: 0 0 0.5vmax black;
 }
 .res-nav >ul{
@@ -81,7 +81,7 @@ nav >button >a{
     text-decoration: none;
     font-family: 'Edu TAS Beginner', cursive;
     font-size: 2.5vmax;
-    color: black;
+    color: whitesmoke;
 }
 @media (max-width: 600px) {
     .nav-filler{
@@ -117,7 +117,7 @@ nav >button >a{
         margin-top: 3vmax;
         background-color: transparent;
         border: none;
-        box-shadow: 0.1vmax 0.1vmax 0.5vmax black;
+        box-shadow: 0.1vmax 0.1vmax 0.5vmax rgb(226, 222, 222);
         border-radius: 0.5vmax;
     }
     .res-nav >button >a{

@@ -57,6 +57,63 @@ router.get('/forgetpassword', function(req, res, next) {
   res.render('forgetpassword', { admin: req.user });
 });
 
+router.get('/delete/:id', islogin, async function(req, res, next) {
+  try {
+    await USER.findByIdAndDelete(req.params.id)
+    res.redirect("/")
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.get('/update/:id', islogin, async function(req, res, next) {
+  try {
+    const user = await USER.findById(req.params.id)
+    res.render('update', { admin: req.user , user });  
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.post('/update/:id', islogin, async function(req, res, next) {
+  try {
+    await USER.findByIdAndUpdate(req.params.id , 
+      {username: req.body.username , 
+       email: req.body.email , 
+       mobile: req.body.mobile , 
+       budget: req.body.budget})
+    res.redirect("/profilesetting")
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.get('/changepassword/:id', islogin, async function(req, res, next) {
+  try {
+    const user = await USER.findById(req.params.id)
+    console.log(user)
+    res.render('changepassword', { admin: req.user , user });    
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.post('/changepassword/:id',  async function(req, res, next) {
+  try {
+    if(req.body.newpassword == req.body.cnfpassword){
+      const user = await USER.findById(req.params.id)
+      user.changePassword(req.body.oldpassword , req.body.newpassword)
+      await user.save()
+      res.redirect("/signin")
+    }else{
+      res.send("NEW PASSWORD AND CONFORM PASSWORD NOT MATCH")
+    }
+
+  } catch (error) {
+    res.send(error)
+  }
+});
+
 router.post('/sendotp', async function(req, res, next) {
 try {
   const user = await USER.findOne({email: req.body.email})
@@ -132,7 +189,7 @@ router.post('/resetpassword/:email', async function(req, res, next) {
   
 router.get('/profile', islogin ,async function(req, res, next) {
   try {
-
+    
     res.render("profile" , { admin: req.user})
   } catch (error) {
     res.send(error)

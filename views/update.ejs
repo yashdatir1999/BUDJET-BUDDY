@@ -1,0 +1,15 @@
+<%- include("code/header") %>
+<%- include("code/nav") %>
+<link rel="stylesheet" href="/stylesheets/update.css">
+<div class="update">
+    <form action="/update/<%= user._id%>" method="post">
+        <h2>UPDATE ACCOUNT</h2>
+        <input type="text" value="<%= user.username%>" placeholder="Enter Username" name="username" id=""><br>
+        <input type="email" value="<%= user.email%>" name="email" placeholder="Enter E-mail" id=""><br>
+        <input type="number"  value="<%= user.mobile%>" name="mobile" placeholder="Enter Mobile No" id=""><br>
+        <input type="number" value="<%= user.budget%>"name="budget" placeholder="Enter Monthly Budget" id=""><br>
+        <button>Update</button>
+    </form>
+</div>
+
+<%- include("code/footer") %>

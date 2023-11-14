@@ -47,7 +47,7 @@
     justify-content: space-between;
 }
 .box{
-    background-color: red;
+    /* background-color: red; */
     width: 50%;
     font-size: 1.5vmax;
 }
@@ -55,5 +55,32 @@
 .contener-right{
     height: 100%;
     width: 40%;
-    background-color: rgb(166, 72, 88);
+    background-color: rgb(225, 159, 170);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contener-right >a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    /* background-color: red; */
+    padding: 1vmax;
+    padding-top: 1.2vmax;
+    border-radius: 0.7vmax;
+    color: black;
+    /* border: 0.2vmax solid black; */
+}
+.update{
+    background-color: rgb(51, 176, 51);
+}
+.update:hover{
+    box-shadow: 0 0 0.5vmax rgb(51, 176, 51);
+}
+.delete{
+    background-color: red;
+}
+.delete:hover{
+    box-shadow: 0 0 0.5vmax red;
 }

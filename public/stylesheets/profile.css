@@ -2,20 +2,49 @@
     height: 90vh;
     width: 100%;
     background-color: pink;
+    background-image: url(https://i.pinimg.com/564x/b2/37/a8/b237a8913f5d21f2801034cb7acf2cc7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 1vmax;
     font-family: sans-serif;
 }
 .nav{
     height: 10vh;
     width: 90%;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
+    backdrop-filter: blur(5vmax);
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.789);
     margin: auto;
+    border-radius: 0.6vmax;
     margin-bottom: 1vmax;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 3vmax;
 }
-.nav >h3{
+.nav >h3 >a{
+    text-decoration: none;
+    color: black;
     text-transform: uppercase;
+}
+.nav >form >input{
+    padding: 0.5vmax 1vmax;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0.2vmax black;
+}
+.nav >h3 >span{
+    font-weight: 500;
+}
+.nav >button >a{
+    text-decoration: none;
+    font-weight: 700;
+}
+.nav >button{
+    padding: 0.5vmax 1vmax;
+    background-color: transparent;
+    border: 0.2vmax solid black;
+    border-radius: 0.6vmax;
 }

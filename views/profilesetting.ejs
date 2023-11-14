@@ -21,11 +21,14 @@
             </div>
             <div class="box-detail">
                 <h2>MONTHLY BUDGET: </h2>
-                <div class="box"><%= admin.username%></div>
+                <div class="box">₹ <%= admin.budget%></div>
             </div>
-            <h6><a href="">Reset Password</a></h6>
+            <h6><a href="/changepassword/<%= admin._id%>">Change Password</a></h6>
         </div>
-        <div class="contener-right"></div>
+        <div class="contener-right">
+            <a class="update" href="/update/<%= admin._id%>">UPDATE ACCOUNT</a>
+            <a class="delete" href="/delete/<%= admin._id%>">DELETE ACCOUNT</a>
+        </div>
     </div>
 </div>
 
