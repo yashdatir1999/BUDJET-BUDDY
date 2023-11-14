@@ -8,30 +8,31 @@ passport.use(new LocalStrategy(USER.authenticate()))
 const nodemailer = require("nodemailer")
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { admin: req.user });
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Express' });
+  res.render('about', { admin: req.user });
 });
 
 router.get('/services', function(req, res, next) {
-  res.render('Services', { title: 'Express' });
+  res.render('Services', { admin: req.user });
 });
 
 router.get('/contactus', function(req, res, next) {
-  res.render('ContactUs', { title: 'Express' });
+  res.render('ContactUs', { admin: req.user });
 });
 
 router.get('/signup', function(req, res, next) {
-  res.render('signup', { title: 'Express' });
+  res.render('signup', { admin: req.user });
 });
 
 router.post('/signup',async function(req, res, next) {
 try {
   await USER.register(
     {username: req.body.username ,
-     email: req.body.email},
+     email: req.body.email ,
+     mobile: req.body.mobile},
     req.body.password)
     res.redirect("/signin")
 } catch (error) {
@@ -40,19 +41,19 @@ try {
 });
 
 router.get('/signin', function(req, res, next) {
-  res.render('signin', { title: 'Express' });
+  res.render('signin', { admin: req.user });
 });
 
 router.post('/signin', 
 passport.authenticate("local",{
-  successRedirect: "/",
+  successRedirect: "/profile",
   failureRedirect: "/signin"
 }),function(req, res, next) {
   res.render('signin', { title: 'Express' });
 });
 
 router.get('/forgetpassword', function(req, res, next) {
-  res.render('forgetpassword', { title: 'Express' });
+  res.render('forgetpassword', { admin: req.user });
 });
 
 router.post('/sendotp', async function(req, res, next) {
@@ -105,7 +106,7 @@ router.post('/enterotp/:email', async function(req, res, next) {
     const user = await USER.findOne({email: req.params.email})
     if(user.otp == req.body.otp){
       user.otp = -1
-      res.render("resetpassword" , {user})
+      res.render("resetpassword" , {user , admin: req.user})
     }
   } catch (error) {
     res.send(error)  
@@ -128,5 +129,31 @@ router.post('/resetpassword/:email', async function(req, res, next) {
   }
 });
   
+router.get('/profile', islogin ,async function(req, res, next) {
+  try {
+
+    res.render("profile" , { admin: req.user})
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.get('/signout', islogin, function(req, res, next) {
+  req.logout(() =>{
+    res.redirect("/signin")
+  })
+});
+
+router.get('/profilesetting', islogin, function(req, res, next) {
+  res.render("profilesetting" , {admin: req.user})
+});
+
+function islogin(req , res , next){
+  if(req.isAuthenticated()){
+    next()
+  }else{
+    res.redirect("/signin")
+  }
+}
 
 module.exports = router;

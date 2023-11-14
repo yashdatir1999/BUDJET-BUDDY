@@ -13,7 +13,7 @@
 }
 .signup >form{
     /* background-color: pink; */
-    height: 55vh;
+    height: 60vh;
     width: 22%;
     border-radius: 0.7vmax;
     display: flex;
@@ -73,7 +73,7 @@
         height: 89%;
     }
     .signup >form{
-        height: 40vh;
+        height: 45vh;
         width: 80%;
     }
     .signup >form >h2{

@@ -1,0 +1,58 @@
+.profilesetting{
+    height: 90vh;
+    width: 100%;
+    background-color: orange;
+    padding: 1vmax;
+}
+.back{
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    padding: 0 3vmax;
+}
+.back >a{
+    text-decoration: none;
+    font-size: 2vmax;
+    /* background-color: red; */
+    padding: 0.3vmax 0.4vmax;
+    border-radius: 50%;
+    border: 0.1vmax solid black;
+    box-shadow: 0 0 0.4vmax black;
+}
+.profilesetting-contener{
+    height: 60vh;
+    width: 80%;
+    margin: auto;
+    background-color: cadetblue;
+    margin-top: 4vmax;
+    display: flex;
+    gap: 2vmax;
+}
+.contener-left{
+    height: 100%;
+    width: 60%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5vmax 2vmax;
+}
+.box-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box{
+    background-color: red;
+    width: 50%;
+    font-size: 1.5vmax;
+}
+
+.contener-right{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(166, 72, 88);
+}

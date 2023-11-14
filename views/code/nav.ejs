@@ -1,27 +1,57 @@
 <link rel="stylesheet" href="/stylesheets/nav.css">
 
-<nav>
-    <h2><a href="/">Budget Buddy</a></h2>
-    <div class="menu">
-        <i class="ri-menu-4-line"></i>
+<% if(!admin){ %>
+    <nav>
+        <h2><a href="/">Budget Buddy</a></h2>
+        <div class="menu">
+            <i class="ri-menu-4-line"></i>
+        </div>
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+        <button><a href="/signin">SIGN IN</a></button>
+    </nav>
+    <div class="nav-filler"></div>
+    <div class="res-nav">
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+        <button><a href="/signin">SIGN IN</a></button>
+    
     </div>
-    <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contactus">Contact Us</a></li>
-    </ul>
-    <button><a href="/signin">SIGN IN</a></button>
-</nav>
-<div class="nav-filler"></div>
-<div class="res-nav">
-    <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contactus">Contact Us</a></li>
-    </ul>
-    <button><a href="/signin">SIGN IN</a></button>
+    
+<% }else{ %>
 
-</div>
+    <nav>
+        <h2><a href="/">Budget Buddy</a></h2>
+        <div class="menu">
+            <i class="ri-menu-4-line"></i>
+        </div>
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+        <button><a href="/signout">SIGN OUT</a></button>
+    </nav>
+    <div class="nav-filler"></div>
+    <div class="res-nav">
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+        </ul>
+        <button><a href="/signout">SIGN OUT</a></button>
+    
+    </div>
+    
+
+<% } %>
+
 
 <script>
     var flag = 0

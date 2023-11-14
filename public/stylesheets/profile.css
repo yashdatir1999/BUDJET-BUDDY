@@ -1,0 +1,21 @@
+.profile{
+    height: 90vh;
+    width: 100%;
+    background-color: pink;
+    padding: 1vmax;
+    font-family: sans-serif;
+}
+.nav{
+    height: 10vh;
+    width: 90%;
+    background-color: palevioletred;
+    margin: auto;
+    margin-bottom: 1vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vmax;
+}
+.nav >h3{
+    text-transform: uppercase;
+}

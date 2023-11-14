@@ -1,0 +1,33 @@
+<%- include("code/header") %>
+<%- include("code/nav") %>
+<link rel="stylesheet" href="/stylesheets/profilesetting.css">
+<div class="profilesetting">
+    <div class="back">
+        <a href="/profile"><i class="ri-arrow-left-double-fill"></i></a>
+    </div>
+    <div class="profilesetting-contener">
+        <div class="contener-left">
+            <div class="box-detail">
+                <h2>USERNAME: </h2>
+                <div class="box"><%= admin.username%></div>
+            </div>
+            <div class="box-detail">
+                <h2>E-MAIL: </h2>
+                <div class="box"><%= admin.email%></div>
+            </div>
+            <div class="box-detail">
+                <h2>MOBILE NO.: </h2>
+                <div class="box"><%= admin.mobile%></div>
+            </div>
+            <div class="box-detail">
+                <h2>MONTHLY BUDGET: </h2>
+                <div class="box"><%= admin.username%></div>
+            </div>
+            <h6><a href="">Reset Password</a></h6>
+        </div>
+        <div class="contener-right"></div>
+    </div>
+</div>
+
+<%#- include("code/page-footer") %>
+<%- include("code/footer") %>
