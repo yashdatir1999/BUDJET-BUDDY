@@ -32,7 +32,8 @@ try {
   await USER.register(
     {username: req.body.username ,
      email: req.body.email ,
-     mobile: req.body.mobile},
+     mobile: req.body.mobile ,
+     budget: 10000 },
     req.body.password)
     res.redirect("/signin")
 } catch (error) {
