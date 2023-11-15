@@ -1,0 +1,78 @@
+.addexpenses{
+    height: 90vh;
+    width: 100%;
+    /* background-color: rgb(144, 99, 99); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-image: url(https://i.pinimg.com/564x/d9/42/9d/d9429d57770996eda955468546a95d62.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.addexpenses >form{
+    /* background-color: pink; */
+    height: 60vh;
+    width: 35%;
+    border-radius: 0.7vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vmax;
+    backdrop-filter: blur(0.2vmax);
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.732);
+}
+.addexpenses >form >h2{
+    margin-top: -2vmax;
+    margin-bottom: 2vmax;
+    font-size: 2vmax;
+    
+}
+.addexpenses >form >input{
+    width: 100%;
+    padding: 0.5vmax;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0.3vmax black;
+    margin-bottom: 0.2vmax;
+    border-radius: 0.3vmax;
+}
+.addexpenses >form >input::placeholder{
+    color: black;
+}
+.addexpenses >form >select{
+    padding: 0.4vmax;
+    width: 100%;
+    background-color: transparent;
+}
+.addexpenses >form >button{
+    padding: 0.5vmax;
+    width: 100%;
+    font-size: 1.2vmax;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0.2vmax 0.2vmax 0.5vmax rgba(0, 0, 0, 0.813) ;
+    border-radius: 0.3vmax;
+}
+@media (max-width: 600px) {
+    .addexpenses{
+        height: 89%;
+    }
+    .addexpenses >form{
+        height: 45vh;
+        width: 80%;
+    }
+    .addexpenses >form >h2{
+        font-size: 2.5vmax;
+        transform: translateY(-3vmax);
+    }
+    .addexpenses >form >button{
+        font-size: 2vmax;
+        padding: 0.9vmax 0;
+        margin-bottom: 1vmax;
+    }
+        
+}

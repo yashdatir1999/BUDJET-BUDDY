@@ -11,7 +11,9 @@ const userdata = new mongoose.Schema({
     otp: {
         type: String,
         default: -1
-    }
+    },
+
+    userexpenses: [{type: mongoose.Schema.Types.ObjectId , ref: "userexpenses"}]
 })
 
 userdata.plugin(plm)

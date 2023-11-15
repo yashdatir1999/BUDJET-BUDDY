@@ -2,29 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 const USER = require("../module/usermodel")
+const USEREXPENSES = require("../module/userexpenses")
 const passport = require("passport")
 const LocalStrategy = require("passport-local")
 passport.use(new LocalStrategy(USER.authenticate()))
 const nodemailer = require("nodemailer")
-
-const expenseslist = [
-  {expenses: "housing"},
-  {expenses: "bills"},
-  {expenses: "groceries"},
-  {expenses: "transportation"},
-  {expenses: "healthcare"},
-  {expenses: "insurance"},
-  {expenses: "debtpayments"},
-  {expenses: "personalcare"},
-  {expenses: "entertainment"},
-  {expenses: "clothing"},
-  {expenses: "education"},
-  {expenses: "savings"},
-  {expenses: "giftsdonations"},
-  {expenses: "taxes"},
-  {expenses: "miscellaneous"}
-]
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -240,5 +222,17 @@ router.get('/addexpenses', islogin, function(req, res, next) {
   res.render('addexpenses', { admin: req.user });
 });
 
+router.post('/addexpenses', islogin, async function(req, res, next) {
+  try {
+    const newexpenses = new USEREXPENSES(req.body)
+    req.user.userexpenses.push(newexpenses._id)
+    newexpenses.user = req.user.id
+    await newexpenses.save()
+    await req.user.save()
+    res.redirect("/profile")
+  } catch (error) {
+    res.send(error)
+  }
+});
 
 module.exports = router;

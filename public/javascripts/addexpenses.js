@@ -29,10 +29,12 @@ function populate(catagory , subcatagory){
     }else if(catagory.value === "debtpayments"){
         var optionarr = ['creditcardpayments|CREDIT CARD PAYMENTS',
         'loanpayments|LOAN PAYMENTS (PERSONAL, STUDENT, ETC.)']
-    }else if(catagory.value = "personalcare"){
+    }
+    else if(catagory.value === "personalcare"){
         var optionarr = ['haircutsandsalonservices|HAIRCUTS AND SALON SERVICES',
         'toiletriesandpersonalhygieneproducts|TOILETRIES AND PERSONAL HYGIENE PRODUCTS']
-    }else if(catagory.value = "entertainment"){
+    }
+    else if(catagory.value === "entertainment"){
         var optionarr = ['diningout|DINING OUT',
         'moviesconcertsevents|MOVIES, CONCERTS, EVENTS',
         'hobbiesandsubscriptions|HOBBIES AND SUBSCRIPTIONS']
@@ -55,9 +57,12 @@ function populate(catagory , subcatagory){
         var optionarr = ['anyotherexpenses|ANY OTHER EXPENSES THAT DON NOT FIT INTO SPECIFIC CATEGORIES']
     }
 
-    
-
-
-
+    for(var option in optionarr){
+        var pair = optionarr[option].split("|")
+        var newoption = document.createElement("option")
+        newoption.value = pair[0]
+        newoption.innerHTML = pair[1]
+        subcatagory.options.add(newoption)
+    }
 
 }
