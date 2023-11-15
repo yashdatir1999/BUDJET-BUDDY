@@ -6,6 +6,26 @@ const passport = require("passport")
 const LocalStrategy = require("passport-local")
 passport.use(new LocalStrategy(USER.authenticate()))
 const nodemailer = require("nodemailer")
+
+const expenseslist = [
+  {expenses: "housing"},
+  {expenses: "bills"},
+  {expenses: "groceries"},
+  {expenses: "transportation"},
+  {expenses: "healthcare"},
+  {expenses: "insurance"},
+  {expenses: "debtpayments"},
+  {expenses: "personalcare"},
+  {expenses: "entertainment"},
+  {expenses: "clothing"},
+  {expenses: "education"},
+  {expenses: "savings"},
+  {expenses: "giftsdonations"},
+  {expenses: "taxes"},
+  {expenses: "miscellaneous"}
+]
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { admin: req.user });
@@ -213,5 +233,12 @@ function islogin(req , res , next){
     res.redirect("/signin")
   }
 }
+
+// /////////////// EXPENSES ////////////////
+
+router.get('/addexpenses', islogin, function(req, res, next) {
+  res.render('addexpenses', { admin: req.user });
+});
+
 
 module.exports = router;

@@ -1,0 +1,37 @@
+<%- include("code/header") %>
+<%- include("code/nav") %>
+
+<form action="/addexpenses" method="post">
+
+    <select name="catagory" id="catagory" onchange="populate(this.id , 'subcatagory')">
+        <option value="">--SELECT CATAGORY--</option>
+        <option value="housing">HOUSING</option>
+        <option value="bills">BILLS</option>
+        <option value="groceries">GROCERIES</option>
+        <option value="transportation">TRANSPORTATION</option>
+        <option value="healthcare">HEALTHCARE</option>
+        <option value="insurance">INSURANCE</option>
+        <option value="debtpayments">DEBT PAYMENTS</option>
+        <option value="personalcare">PERSONAL CARE</option>
+        <option value="entertainment">ENTERTAINMENT</option>
+        <option value="clothing">CLOTHING</option>
+        <option value="education">EDUCATION</option>
+        <option value="savings">SAVINGS</option>
+        <option value="giftsdonations">GIFTS & DONATIONS</option>
+        <option value="taxes">TAXES</option>
+        <option value="miscellaneous">MISCELLANEOUS</option>
+    </select>
+
+    <select name="subcatagory" id="subcatagory">
+        <option value="">--EXPENSES SUBCATAGORY--</option>
+    </select>
+
+
+    <input type="text" name="name" placeholder="Enter Expense Name " id="">
+    <input type="number" name="amount" placeholder="Enter Expense Amount" id="">
+
+</form>
+
+<script src="/javascripts/addexpenses"></script>
+<%#- include("code/page-footer") %>
+<%- include("code/footer") %>
