@@ -48,3 +48,52 @@
     border: 0.2vmax solid black;
     border-radius: 0.6vmax;
 }
+.allexpenses{
+    height: 70vh;
+    width: 80%;
+    background-color: palevioletred;
+    margin: auto;
+    overflow-y: auto;
+    padding-left: 4.5vmax;
+}
+.allexpenses::-webkit-scrollbar{
+    display: none;
+}
+.expense{
+    display: inline-block;
+    height: 45vh;
+    width: 21vw;
+    background-color: palegreen;
+    margin: 0.8vmax;
+}
+.srno{
+    height: 10vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5vmax;
+}
+.expense >h3{
+    text-align: center;
+    margin-bottom: 1vmax;
+}
+.btns{
+    height: 8vh;
+    width: 90%;
+    background-color: orangered;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btns >a{
+    text-decoration: none;
+    background-color: black;
+    padding: 0.5vmax 1.3vmax;
+    color: white;
+    font-family: cursive;
+    font-weight: 700;
+    border-radius: 0.5vmax;
+}

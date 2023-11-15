@@ -191,8 +191,14 @@ router.post('/resetpassword/:email', async function(req, res, next) {
   
 router.get('/profile', islogin ,async function(req, res, next) {
   try {
-    
-    res.render("profile" , { admin: req.user})
+    const userbudget = await req.user.populate("userexpenses")
+    const user = userbudget.userexpenses
+    var total = 0
+    user.forEach(function(u){
+      total += u.expenseamount
+    })
+    console.log(total)
+    res.render("profile" , { admin: req.user , user , total})
   } catch (error) {
     res.send(error)
   }
