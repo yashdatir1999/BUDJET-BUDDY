@@ -226,6 +226,18 @@ function islogin(req , res , next){
   }
 }
 
+router.post('/search', islogin, async function(req, res, next) {
+  try {
+    const userbudget = await req.user.populate("userexpenses")
+    const user = userbudget.userexpenses
+
+    console.log(searcharr)
+    res.render("searchpage" , {admin: req.user , searcharr})
+  } catch (error) {
+    res.send(error)
+  }
+});
+
 // /////////////// EXPENSES ////////////////
 
 router.get('/addexpenses', islogin, function(req, res, next) {

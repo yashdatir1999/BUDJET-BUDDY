@@ -1,0 +1,11 @@
+<%- include("code/header") %>
+<%- include("code/nav") %>
+
+<% searcharr.forEach((s)=> { %>
+    <%= s.catagory%> <br>
+    <%= s.subcatagory%> <br>
+    <%= s.expansesname%> <br>
+    <%= s.expenseamount%> <br>
+<%})%>
+
+<%- include("code/footer") %>
