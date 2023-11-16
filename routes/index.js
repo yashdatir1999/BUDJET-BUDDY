@@ -61,7 +61,11 @@ router.get('/forgetpassword', function(req, res, next) {
 
 router.get('/delete/:id', islogin, async function(req, res, next) {
   try {
-    await USER.findByIdAndDelete(req.params.id)
+    const del = await USER.findByIdAndDelete(req.params.id) 
+    console.log(del.userexpenses)
+    del.userexpenses.forEach(async (d)=>{
+      await USEREXPENSES.findByIdAndDelete(d._id)
+    })
     res.redirect("/")
   } catch (error) {
     res.send(error)
@@ -237,6 +241,39 @@ router.post('/addexpenses', islogin, async function(req, res, next) {
     await req.user.save()
     res.redirect("/profile")
   } catch (error) {
+    res.send(error)
+  }
+});
+
+router.get('/deleteexpenses/:id', islogin, async function(req, res, next) {
+try {
+  const expenseindex = req.user.userexpenses.findIndex((i)=>{
+    i._id == req.params.id
+  })
+  req.user.userexpenses.splice(expenseindex , 0)
+  await req.user.save() 
+  await USEREXPENSES.findByIdAndDelete(req.params.id)
+  res.redirect("/profile")
+} catch (error) {
+  res.send(error)
+}
+});
+
+router.get('/updateexpenses/:id', islogin, async function(req, res, next) {
+  try {
+    const expense = await USEREXPENSES.findById(req.params.id)
+    console.log(expense)
+    res.render("updateexpenses" , {expense , admin: req.user})
+  } catch (error) {
+    res.send(error)
+  }
+});
+
+router.post('/updateexpenses/:id', islogin, async function(req, res, next) {
+  try {
+    await USEREXPENSES.findByIdAndUpdate(req.params.id , req.body)
+    res.redirect("/profile")
+    } catch (error) {
     res.send(error)
   }
 });

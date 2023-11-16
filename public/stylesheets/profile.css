@@ -1,7 +1,7 @@
 .profile{
     height: 90vh;
     width: 100%;
-    background-color: pink;
+    /* background-color: pink; */
     background-image: url(https://i.pinimg.com/564x/b2/37/a8/b237a8913f5d21f2801034cb7acf2cc7.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -38,20 +38,19 @@
 .nav >h3 >span{
     font-weight: 500;
 }
-.nav >button >a{
+.nav >a{
     text-decoration: none;
     font-weight: 700;
-}
-.nav >button{
     padding: 0.5vmax 1vmax;
     background-color: transparent;
     border: 0.2vmax solid black;
     border-radius: 0.6vmax;
+    color: black;
 }
 .allexpenses{
     height: 70vh;
     width: 80%;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     margin: auto;
     overflow-y: auto;
     padding-left: 4.5vmax;
@@ -63,14 +62,17 @@
     display: inline-block;
     height: 45vh;
     width: 21vw;
-    background-color: palegreen;
+    /* background-color: palegreen; */
     margin: 0.8vmax;
+    box-shadow: 0 0 0.3vmax rgba(0, 0, 0, 0.718);
 }
 .srno{
     height: 10vh;
     width: 100%;
-    background-color: red;
+    border-bottom: 0.1vmax solid rgba(0, 0, 0, 0.572);
+    /* background-color: red; */
     display: flex;
+    font-size: 1vmax;
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5vmax;
@@ -82,7 +84,7 @@
 .btns{
     height: 8vh;
     width: 90%;
-    background-color: orangered;
+    /* background-color: orangered; */
     margin: auto;
     display: flex;
     align-items: center;
@@ -96,4 +98,45 @@
     font-family: cursive;
     font-weight: 700;
     border-radius: 0.5vmax;
+}
+@media (max-width: 600px) {
+    .profile{
+        height: 83.2vh;
+        /* background-color: pink; */
+    }
+    .nav{
+        height: 7vmax;
+        width: 95%;
+        padding: 0 1vmax;
+        gap: 0.7vmax;
+    }
+    .nav >h3 >a{
+        font-size: 1vmax;
+    }
+    .nav >a{
+        padding: 1vmax;
+        /* width: 24%; */
+        font-size: 0.7vmax;
+    }
+    .nav >form >input{
+        width: 13vmax;
+    }
+    .nav >h3{
+        font-size: 1vmax;
+    }
+    .allexpenses{
+        /* background-color: orange; */
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+    }
+    .expense{
+        width: 90%;
+    }
+    .btns >a{
+        padding: 1vmax 3vmax;
+        font-family: sans-serif;
+    }
 }

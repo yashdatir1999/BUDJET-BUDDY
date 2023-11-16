@@ -9,22 +9,22 @@
             <input type="text" name="serch" placeholder="Search" id="">
         </form>
         <h3>Total Expances: <span><%= total%></span></h3>
-        <button><a href="/addexpenses">ADD EXPENSES</a></button>
+        <a href="/addexpenses">ADD EXPENSES</a>
     </div>
     <div class="allexpenses">
 
         <% user.forEach(function(u , i){ %>
             <div class="expense">
                 <div class="srno">
-                    <h1>#<%= i+1%></h1>
+                    <h1># EXPENSE <%= i+1%></h1>
                 </div>
                 <h3>NAME : <%= u.expansesname%></h3>
                 <h3>AMOUNT : ₹<%= u.expenseamount%></h3>
                 <h3>CATAGORY : <%= u.catagory%></h3>
                 <h3>TAG : <%= u.subcatagory%></h3>
                 <div class="btns">
-                    <a href="">Update</a>
-                    <a href="">Delete</a>
+                    <a href="/updateexpenses/<%= u._id%>">Update</a>
+                    <a href="/deleteexpenses/<%= u._id%>">Delete</a>
                 </div>
             </div>
         <%})%>
@@ -32,5 +32,4 @@
     </div>
 </div>
 
-<%#- include("code/page-footer") %>
 <%- include("code/footer") %>

@@ -20,7 +20,7 @@ function populate(catagory , subcatagory){
         var optionarr = ['Health Insurance|Health Insurance',
         'Life Insurance|Life Insurance',
         'Home Insurance|Home Insurance']
-    }else if(catagory.value === "debtpayments"){
+    }else if(catagory.value === "debt payments"){
         var optionarr = ['Credit Cards|Credit Cards',
         'Loans|Loans',
         'Personal Debts|Personal Debts']

@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="/stylesheets/addexpenses.css">
 <div class="addexpenses">
 
-<form action="/addexpenses" method="post">
+<form action="/updateexpenses/<%= expense._id%>" method="post">
     <h2>ADD EXPENSES</h2>
-    <select name="catagory" id="catagory" onchange="populate(this.id , 'subcatagory')">
+    <select disabled name="catagory" id="catagory" onchange="populate(this.id , 'subcatagory')">
         <option value="">--SELECT CATAGORY--</option>
         <option value="housing">HOUSING</option>
         <option value="food">FOOD</option>
@@ -16,16 +16,15 @@
         <option value="education">EDUCATION</option>
         <option value="miscellaneous">MISCELIANEOUS</option>
     </select><br>
-    <select name="subcatagory" id="subcatagory">
+    <select disabled name="subcatagory" id="subcatagory">
         <option value="">--EXPENSES SUBCATAGORY--</option>
     </select><br>
-    <input type="text" name="expansesname" placeholder="Enter Expense Name " id=""><br>
-    <input type="number" name="expenseamount" placeholder="Enter Expense Amount" id=""><br>
+    <input type="text" name="expansesname" value="<%= expense.expansesname%>" placeholder="Enter Expense Name " id=""><br>
+    <input type="number" name="expenseamount" value="<%= expense.expenseamount%>" placeholder="Enter Expense Amount" id=""><br>
     <button>Submit</button>
 </form>
 
 </div>
 
 <script src="/javascripts/addexpenses.js"></script>
-
 <%- include("code/footer") %>

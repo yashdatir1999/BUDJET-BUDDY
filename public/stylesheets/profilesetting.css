@@ -4,12 +4,16 @@
     background-color: orange;
     padding: 1vmax;
     font-family: sans-serif;
+    background-image: url(https://i.pinimg.com/564x/b2/37/a8/b237a8913f5d21f2801034cb7acf2cc7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .back{
     height: 10vh;
     width: 90%;
     margin: auto;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     align-items: center;
     padding: 0 3vmax;
@@ -27,7 +31,7 @@
     height: 60vh;
     width: 80%;
     margin: auto;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     margin-top: 4vmax;
     display: flex;
     gap: 2vmax;
@@ -35,11 +39,14 @@
 .contener-left{
     height: 100%;
     width: 60%;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 5vmax 2vmax;
+}
+.contener-left >h6 >a{
+    text-decoration: none;
 }
 .box-detail{
     display: flex;
@@ -55,7 +62,7 @@
 .contener-right{
     height: 100%;
     width: 40%;
-    background-color: rgb(225, 159, 170);
+    /* background-color: rgb(225, 159, 170); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,4 +90,35 @@
 }
 .delete:hover{
     box-shadow: 0 0 0.5vmax red;
+}
+@media (max-width: 600px) {
+    .profilesetting{
+        height: 83vh;
+    }
+    .back{
+        height: 8vh;
+        width: 95%;
+        padding: 0.2vmax;
+        /* background-color: rebeccapurple; */
+    }
+    .profilesetting-contener{
+        /* background-color: gray; */
+        flex-direction: column;
+        width: 95%;
+        gap: 0;
+    }
+    .contener-left{
+        /* background-color: aquamarine; */
+        height: 30vh;
+        width: 100%;
+    }
+    .contener-left >.box-detail >h2{
+        font-size: 1.5vmax;
+    }
+    .contener-right{
+        /* background-color: blueviolet; */
+        height: 30vh;
+        width: 100%;
+        flex-direction: row;
+    }
 }
