@@ -1,8 +1,11 @@
 <%- include("code/header") %>
 <%- include("code/nav") %>
 <link rel="stylesheet" href="/stylesheets/addexpenses.css">
-<div class="addexpenses">
 
+<div class="nav">
+    <a href="/profile"><i class="ri-arrow-left-double-line"></i></a>
+</div>
+<div class="addexpenses">
 <form action="/addexpenses" method="post">
     <h2>ADD EXPENSES</h2>
     <select name="catagory" id="catagory" onchange="populate(this.id , 'subcatagory')">

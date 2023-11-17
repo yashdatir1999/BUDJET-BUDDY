@@ -228,9 +228,14 @@ function islogin(req , res , next){
 
 router.post('/search', islogin, async function(req, res, next) {
   try {
+    var searcharr =[]
     const userbudget = await req.user.populate("userexpenses")
     const user = userbudget.userexpenses
-
+    user.forEach((u)=>{
+      if(u.catagory === req.body.search || u.subcatagory === req.body.search || u.expansesname === req.body.search){
+        searcharr.push(u)
+      }
+    })
     console.log(searcharr)
     res.render("searchpage" , {admin: req.user , searcharr})
   } catch (error) {

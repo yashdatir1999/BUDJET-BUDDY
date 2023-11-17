@@ -1,0 +1,105 @@
+.search{
+    height: 90vh;
+    width: 100%;
+    /* background-color: pink; */
+    background-image: url(https://i.pinimg.com/564x/b2/37/a8/b237a8913f5d21f2801034cb7acf2cc7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1vmax;
+    font-family: sans-serif;
+
+}
+.nav{
+    height: 10vh;
+    width: 90%;
+    /* background-color: palevioletred; */
+    backdrop-filter: blur(5vmax);
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.789);
+    margin: auto;
+    border-radius: 0.6vmax;
+    margin-bottom: 1vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vmax;
+}
+.nav >h1 >a{
+    text-decoration: none;
+    color: black;
+    /* background-color: red; */
+    padding: 0.3vmax 0.4vmax;
+    border-radius: 50%;
+    border: 0.2vmax solid black;
+    transition: all linear 0.2s;
+    margin-right: 26vmax;
+}
+.nav >h1 >a:hover{
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.8);
+}
+.searchexpenses{
+    height: 70vh;
+    width: 80%;
+    /* background-color: palevioletred; */
+    margin: auto;
+    overflow-y: auto;
+    padding-left: 4.5vmax;
+}
+.searchexpenses::-webkit-scrollbar{
+    display: none;
+}
+.expense{
+    display: inline-block;
+    height: 45vh;
+    width: 21vw;
+    /* background-color: palegreen; */
+    margin: 0.8vmax;
+    box-shadow: 0 0 0.3vmax rgba(0, 0, 0, 0.718);
+}
+.srno{
+    height: 10vh;
+    width: 100%;
+    border-bottom: 0.1vmax solid rgba(0, 0, 0, 0.572);
+    /* background-color: red; */
+    display: flex;
+    font-size: 1vmax;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5vmax;
+}
+.expense >h3{
+    margin-top: 1.5vmax;
+    text-align: center;
+    margin-bottom: 1vmax;
+}
+@media (max-width: 600px) {
+    .profile{
+        height: 83.2vh;
+        /* background-color: pink; */
+    }
+    .nav{
+        height: 7vmax;
+        width: 95%;
+        display: flex;
+    }
+    .nav >h1{
+        font-size: 1.8vmax;
+    }
+    .nav >h1 >a{
+        margin-right: 8vmax;
+    }
+    .searchexpenses{
+        /* background-color: orange; */
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+    }
+    .expense{
+        width: 90%;
+    }
+    .srno{
+        height: 8vh;
+    }
+}

@@ -1,11 +1,28 @@
 <%- include("code/header") %>
 <%- include("code/nav") %>
+<link rel="stylesheet" href="/stylesheets/searchpage.css">
 
-<% searcharr.forEach((s)=> { %>
-    <%= s.catagory%> <br>
-    <%= s.subcatagory%> <br>
-    <%= s.expansesname%> <br>
-    <%= s.expenseamount%> <br>
-<%})%>
+<div class="search">
+
+<div class="nav">
+    <h1><a href="/profile"><i class="ri-arrow-left-double-line"></i></a> SEARCH RESULTS</h1>
+</div>
+<div class="searchexpenses">
+
+    <% searcharr.forEach(function(u , i){ %>
+        <div class="expense">
+            <div class="srno">
+                <h1># EXPENSE <%= i+1%></h1>
+            </div>
+            <h3>NAME : <%= u.expansesname%></h3>
+            <h3>AMOUNT : ₹<%= u.expenseamount%></h3>
+            <h3>CATAGORY : <%= u.catagory%></h3>
+            <h3>TAG : <%= u.subcatagory%></h3>
+        </div>
+    <%})%>
+
+</div>
+
+</div>
 
 <%- include("code/footer") %>
