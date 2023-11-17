@@ -1,0 +1,71 @@
+.services{
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+}
+.services-contener{
+    height: 75vh;
+    width: 100%;
+    /* background-color: palegreen; */
+    display: flex;
+    padding:  0 2vmax;
+}
+.services-contener-left{
+    height: 100%;
+    width: 70%;
+    /* background-color: papayawhip; */
+    padding: 3vmax;
+}
+.services-contener-left >ol >li{
+    margin-bottom: 1.5vmax;
+}
+.services-contener-left >ol >li >h3{
+    font-family: cursive;
+}
+.services-contener-left >ol >li >p{
+    font-family: sans-serif;
+    font-size: 1.1vmax;
+    margin-top: 0.5vmax;
+}
+.services-contener-right{
+    height: 100%;
+    width: 30%;
+    background-color: palevioletred;
+    /* padding: 6vmax; */
+    background-image: url(https://i.pinimg.com/564x/44/53/b0/4453b079cfa6701e04d2637e1fa9ff9a.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.services-contener-right >h1{
+    margin-top: 1.7vmax;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.3vmax;
+    font-size: 4vmax;
+}
+
+@media (max-width: 600px) {
+    .services-contener{
+        flex-direction: column-reverse;
+    }
+    .services-contener-left{
+        width: 100%;
+        height: 40vh;
+    }
+    .services-contener-left > ol > li >h3{
+        font-family: 'Playpen Sans', cursive;
+        font-size: 1.6vmax;
+    }
+    .services-contener-right{
+        padding: 2vmax 2vmax 2vmax 2vmax;
+        width: 100%;
+        height: 65vh;
+        background-color: aqua;
+    }
+    .services-contener-right >h1{
+        margin-top: -2vmax;
+        font-size: 2.7vmax;
+    }
+}
