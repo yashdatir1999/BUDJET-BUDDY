@@ -7,10 +7,26 @@
         <input type="text" placeholder="Enter Username" name="username" id=""><br>
         <input type="email" name="email" placeholder="Enter E-mail" id=""><br>
         <input type="number" name="mobile" placeholder="Enter Mobile No" id=""><br>
-        <input type="password" name="password" placeholder="Enter Password" id=""><br>
+        <input type="password" class="password" name="password" placeholder="Enter Password" id="">
+        <div class="eye">
+            <i class="ri-eye-off-line"></i>
+        </div><br>
         <button>Sign Up</button>
         <h4>Already Have Account? <a href="/signin">Sign In</a></h4>
     </form>
 </div>
 
+<script>
+    const eye = document.querySelector(".eye")
+    const password = document.querySelector(".password")
+    eye.addEventListener("click",function(){
+        if(password.type == "password"){
+            password.type="input"
+            eye.innerHTML=`<i class="ri-eye-line"></i>`
+        }else{
+            password.type="password"
+            eye.innerHTML=`<i class="ri-eye-off-line"></i>`
+        }
+    })
+</script>
 <%- include("code/footer") %>
