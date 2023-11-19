@@ -148,11 +148,39 @@ const transport = nodemailer.createTransport({
 
 // receiver mailing info
 const mailOptions = {
-  from: "Dhanesh Pvt. Ltd.<yashdatir1999@gmail.com>",
+  from: "Budjet Buddy Pvt. Ltd.<yashdatir1999@gmail.com>",
   to: user.email,
-  subject: "Testing Mail Service",
+  subject: "Budget Buddy Account Recovery OTP Request",
   // text: req.body.message,
-  html: `<h1>${otp}</h1>`,
+  html: `<h1>Dear ${user.username} ,</h1> 
+  <br></br>
+  <br></br>
+  We hope this message finds you well. We are reaching out to you from Budget Buddy regarding a recent request for the recovery of your account associated with the email address ${user.email}.
+  <br></br>
+  <br></br>
+  As part of our account recovery process and to ensure the security of your Budget Buddy account, we require you to verify your identity by providing a one-time password (OTP). Please find the OTP details below:
+  <br></br>
+  <br></br>
+  <ul>
+    <li><strong>OTP Code:</strong> ${otp}</li>
+    <li><strong>Purpose:</strong> Account Recovery</li>
+  </ul>
+  <br></br>
+  <br></br>
+  Please enter the provided OTP on the account recovery page to complete the process. If you did not initiate this account recovery request, or if you have any concerns about the security of your account, please contact our support team immediately at support.budjetbuddy.com.
+  <br></br>
+  <br></br>
+  It's important to us that your account remains secure, and we appreciate your prompt attention to this matter. Thank you for choosing Budget Buddy.
+  <br></br>
+  <br></br>
+  Best regards,
+  <br></br>
+  <br></br>
+  The Budget Buddy Team
+  <br></br>
+  support.budjetbuddy.com
+
+  `,
 };
 
 // actual object which intregrate all info and send mail
@@ -171,6 +199,8 @@ router.post('/enterotp/:email', async function(req, res, next) {
     if(user.otp == req.body.otp){
       user.otp = -1
       res.render("resetpassword" , {user , admin: req.user})
+    }else{
+      res.send("WRONG OTP")
     }
   } catch (error) {
     res.send(error)  
