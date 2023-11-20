@@ -325,4 +325,18 @@ router.post('/updateexpenses/:id', islogin, async function(req, res, next) {
   }
 });
 
+router.get('/clearallexpenses/:id', islogin, async function(req, res, next) {
+  try {
+    const all = req.user.userexpenses 
+    all.forEach(async (a)=>{
+      var delid = await USEREXPENSES.findByIdAndDelete(a._id)
+    })
+    req.user.userexpenses.splice(0)
+    await req.user.save() 
+    res.redirect("/profile")
+  } catch (error) {
+    res.send(error)
+  }
+  });
+
 module.exports = router;

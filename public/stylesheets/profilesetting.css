@@ -91,6 +91,9 @@
 .delete:hover{
     box-shadow: 0 0 0.5vmax red;
 }
+.clearallexpenses{
+    background-color: tomato;
+}
 @media (max-width: 600px) {
     .profilesetting{
         height: 83vh;
