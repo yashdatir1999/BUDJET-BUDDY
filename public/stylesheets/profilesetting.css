@@ -72,27 +72,32 @@
     text-decoration: none;
     font-family: sans-serif;
     font-weight: 700;
-    /* background-color: red; */
-    padding: 1vmax;
     padding-top: 1.2vmax;
     border-radius: 0.7vmax;
     color: black;
     /* border: 0.2vmax solid black; */
+    transition: all linear 0.2s;
 }
 .update{
     background-color: rgb(51, 176, 51);
+    padding: 1vmax 2vmax;   
 }
 .update:hover{
     box-shadow: 0 0 0.5vmax rgb(51, 176, 51);
 }
 .delete{
+    padding: 1vmax 2vmax;
     background-color: red;
 }
 .delete:hover{
     box-shadow: 0 0 0.5vmax red;
 }
 .clearallexpenses{
+    padding: 1vmax;
     background-color: tomato;
+}
+.clearallexpenses:hover{
+    box-shadow: 0 0 0.5vmax rgba(255, 99, 71, 0.842);
 }
 @media (max-width: 600px) {
     .profilesetting{
@@ -122,6 +127,9 @@
         /* background-color: blueviolet; */
         height: 30vh;
         width: 100%;
-        flex-direction: row;
+        /* flex-direction: row; */
+    }
+    .update , .delete{
+        padding: 1vmax 2.6vmax;
     }
 }
