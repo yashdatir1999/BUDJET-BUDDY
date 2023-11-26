@@ -79,7 +79,9 @@
     transition: all linear 0.2s;
 }
 .update{
-    background-color: rgb(51, 176, 51);
+    color:  rgb(51, 176, 51);
+    border: 0.1vmax solid  rgb(51, 176, 51);
+    /* background-color: rgb(51, 176, 51); */
     padding: 1vmax 2vmax;   
 }
 .update:hover{
@@ -96,10 +98,11 @@
 }
 .clearallexpenses{
     padding: 1vmax;
-    background-color: tomato;
+    color: black;
+    border: 0.1vmax solid black;
 }
 .clearallexpenses:hover{
-    box-shadow: 0 0 0.5vmax rgba(255, 99, 71, 0.842);
+    box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.822);
 }
 @media (max-width: 600px) {
     .profilesetting{

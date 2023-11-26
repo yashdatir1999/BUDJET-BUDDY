@@ -20,6 +20,7 @@ nav{
     height: 10vh;
     width: 100%;
     /* background-color: rgb(197, 176, 219); */
+    background: linear-gradient(to right ,yellow , white ,yellow);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,6 +71,7 @@ nav >button >a{
     width: 45%;
     background-color: black;
     box-shadow: 0 0 0.5vmax black;
+    display: none;
 }
 .res-nav >ul{
     list-style: none;

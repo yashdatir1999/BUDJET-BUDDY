@@ -94,12 +94,28 @@
 }
 .btns >a{
     text-decoration: none;
-    background-color: black;
+    /* background-color: black; */
     padding: 0.5vmax 1.3vmax;
-    color: white;
+    /* color: white; */
     font-family: cursive;
     font-weight: 700;
     border-radius: 0.5vmax;
+}
+.update{
+    transition: all linear 0.2s;
+    color: green;
+    border: 0.2vmax solid green;
+}
+.update:hover{
+    box-shadow: 0 0 0.8vmax rgba(0, 128, 0, 0.818) ;
+}
+.delete{
+    transition: all linear 0.2s;
+    color: red;
+    border: 0.2vmax solid red;
+}
+.delete:hover{
+    box-shadow: 0 0 0.8vmax rgba(255, 0, 0, 0.838) ;
 }
 .expense >h6{
     position: absolute;
