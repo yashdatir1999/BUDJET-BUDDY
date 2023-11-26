@@ -74,7 +74,7 @@
     font-weight: 700;
     padding-top: 1.2vmax;
     border-radius: 0.7vmax;
-    color: black;
+    /* color: black; */
     /* border: 0.2vmax solid black; */
     transition: all linear 0.2s;
 }
@@ -87,7 +87,9 @@
 }
 .delete{
     padding: 1vmax 2vmax;
-    background-color: red;
+    color: red;
+    /* background-color: red; */
+    border: 0.1vmax solid red;
 }
 .delete:hover{
     box-shadow: 0 0 0.5vmax red;
