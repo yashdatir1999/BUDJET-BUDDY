@@ -1,5 +1,5 @@
 .search{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     /* background-color: pink; */
     background-image: url(https://i.pinimg.com/564x/b2/37/a8/b237a8913f5d21f2801034cb7acf2cc7.jpg);
@@ -12,7 +12,7 @@
 }
 .nav{
     height: 10vh;
-    width: 90%;
+    width: 80%;
     /* background-color: palevioletred; */
     backdrop-filter: blur(5vmax);
     box-shadow: 0 0 0.5vmax rgba(0, 0, 0, 0.789);

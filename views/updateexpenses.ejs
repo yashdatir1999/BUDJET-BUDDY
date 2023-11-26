@@ -1,8 +1,8 @@
 <%- include("code/header") %>
-<%- include("code/nav") %>
 <link rel="stylesheet" href="/stylesheets/addexpenses.css">
 <div class="addexpenses">
-
+    <%- include("code/nav") %>
+    
 <form action="/updateexpenses/<%= expense._id%>" method="post">
     <h2>ADD EXPENSES</h2>
     <select disabled name="catagory" id="catagory" onchange="populate(this.id , 'subcatagory')">

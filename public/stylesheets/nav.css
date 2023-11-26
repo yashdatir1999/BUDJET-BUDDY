@@ -20,7 +20,7 @@ nav{
     height: 10vh;
     width: 100%;
     /* background-color: rgb(197, 176, 219); */
-    background: linear-gradient(to right ,yellow , white ,yellow);
+    /* background: linear-gradient(to right ,rgba(255, 255, 0, 0.817) , white ,rgba(255, 255, 0, 0.806)); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +67,7 @@ nav >button >a{
     top: -50%;
     right: 0;
     z-index: 10;
-    height: 43vh;
+    height: 39vh;
     width: 45%;
     background-color: black;
     box-shadow: 0 0 0.5vmax black;

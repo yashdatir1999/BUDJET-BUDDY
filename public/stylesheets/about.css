@@ -1,5 +1,5 @@
 .about{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-color: rgb(246,246,246);
 }
@@ -30,10 +30,10 @@
     padding: 6vmax;
 }
 .about-contener-right >p{
-    font-size: 1.7vmax;
+    font-size: 1.6vmax;
     line-height: 2.3vmax;
     text-align: center;
-    font-family: 'Playpen Sans', cursive;
+    font-family: sans-serif;
 }
 .about-contener-right >p >span{
     font-weight: 700;
@@ -41,16 +41,11 @@
 .about-contener-right >p >a{
     text-decoration: none;
     font-weight: 700;
-    color: red;
-    animation: signin linear infinite alternate-reverse 1s;
+    color: black;
+    /* color: red; */
+    /* animation: signin linear infinite alternate-reverse 1s; */
 }
-@keyframes signin {
-    0%{
-        text-shadow: 0 0 0.5vmax red;
-    }100%{
-        text-shadow: 0 0 0.1vmax red;
-    }
-}
+
 @media (max-width: 600px) {
     .about-contener{
         flex-direction: column;

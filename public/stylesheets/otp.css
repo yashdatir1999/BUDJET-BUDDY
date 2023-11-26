@@ -1,9 +1,10 @@
 .otp{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     /* background-color: rgb(144, 99, 99); */
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     font-family: sans-serif;
     background-image: url(https://i.pinimg.com/564x/d9/42/9d/d9429d57770996eda955468546a95d62.jpg);

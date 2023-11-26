@@ -1,7 +1,7 @@
 <%- include("code/header") %>
-<%- include("code/nav") %>
 <link rel="stylesheet" href="/stylesheets/update.css">
 <div class="update">
+    <%- include("code/nav") %>
     <form action="/update/<%= user._id%>" method="post">
         <h2>UPDATE ACCOUNT</h2>
         <input type="text" value="<%= user.username%>" placeholder="Enter Username" name="username" id=""><br>

@@ -1,7 +1,7 @@
 <%- include("code/header") %>
-<%- include("code/nav") %>
 <link rel="stylesheet" href="/stylesheets/otp.css">
 <div class="otp">
+    <%- include("code/nav") %>
     <form action="/enterotp/<%= email%>" method="post">
         <h2>SUBMIT OTP</h2>
         <input type="number" name="otp" placeholder="Enter OTP" id="">

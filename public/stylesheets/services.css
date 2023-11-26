@@ -24,6 +24,7 @@
 }
 .services-contener-left >ol >li >p{
     font-family: sans-serif;
+    /* background-color: peru; */
     font-size: 1.1vmax;
     margin-top: 0.5vmax;
 }

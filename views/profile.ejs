@@ -1,8 +1,8 @@
 <%- include("code/header") %>
-<%- include("code/nav") %>
 <link rel="stylesheet" href="/stylesheets/profile.css">
 
 <div class="profile">
+    <%- include("code/nav") %>
     <div class="nav">
         <h3><a href="/profilesetting"><%= admin.username%></a></h3>
         <form action="/search" method="post">

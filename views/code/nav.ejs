@@ -63,6 +63,8 @@ document.querySelector(".menu").addEventListener("click" , function(){
     if(flag == 0 ){
         document.querySelector(".menu").innerHTML = `<i class="ri-close-fill"></i>`
         document.querySelector(".res-nav").style.top = "0"
+        document.querySelector(".menu >i").style.color = `white`
+
         flag=1
     }else{
         document.querySelector(".menu").innerHTML = `<i class="ri-menu-4-line"></i>`
