@@ -43,8 +43,9 @@ nav >ul{
 }
 nav >ul >li >a{
     text-decoration: none;
-    font-family: 'Edu TAS Beginner', cursive;
-    font-size: 1.5vmax;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3vmax;
+    font-weight: 700;
     color: black;
 }
 nav >button{

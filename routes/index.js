@@ -7,6 +7,7 @@ const passport = require("passport")
 const LocalStrategy = require("passport-local")
 passport.use(new LocalStrategy(USER.authenticate()))
 const nodemailer = require("nodemailer")
+const idpass = require("../idpasshide")
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -141,8 +142,8 @@ const transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
   auth: {
-      user: "yashdatir1999@gmail.com",
-      pass: "fnjf hnpc buue xlil",
+      user: idpass.gmail,
+      pass: idpass.password,
   },
 });
 
@@ -231,7 +232,7 @@ router.get('/profile', islogin ,async function(req, res, next) {
     user.forEach(function(u){
       total += u.expenseamount
     })
-    console.log(total)
+    // console.log(total)
     res.render("profile" , { admin: req.user , user , total})
   } catch (error) {
     res.send(error)

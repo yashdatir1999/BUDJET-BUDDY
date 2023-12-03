@@ -20,7 +20,9 @@
     margin-bottom: 1.5vmax;
 }
 .services-contener-left >ol >li >h3{
-    font-family: cursive;
+    /* font-family: cursive; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
 }
 .services-contener-left >ol >li >p{
     font-family: sans-serif;
